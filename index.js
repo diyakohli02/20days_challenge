@@ -6,12 +6,9 @@ const app = express()
 const port = process.env.PORT || 10000;
 
 app.get('/', (req, res) => {
-    res.send('Server is up and running!')
+    res.send(`Server is up and running on port ${port}`)
 })
 
-// ... all your require statements and app definitions ...
-
-// Wrap the listen in a try-catch to log any startup failure
 try {
     app.listen(port, () => {
         console.log(`SERVER STARTED: App listening on port ${port}`)
