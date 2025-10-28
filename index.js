@@ -5,6 +5,10 @@ const app = express()
 // Define a fallback port for local development, as process.env.PORT is usually set by Render (or other hosting)
 const port = process.env.PORT || 10000;
 
+app.get('/', (req, res) => {
+    res.send('Server is up and running!')
+})
+
 // ... all your require statements and app definitions ...
 
 // Wrap the listen in a try-catch to log any startup failure
